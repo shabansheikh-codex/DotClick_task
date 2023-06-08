@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+body{
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p,ul{
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-size: 1rem;
+}
+img{
+  width: 100%;
+}
+li{
+  list-style-type: none;
+}
+a{
+  color: inherit !important;
+}
+:root {
+  --primary: #44A16F;
+  --secondary:#FDF307;
+  --danger: #D96A6B;
+  --light: #fff;
+  --secondarylight:#D9D9D9;
+  --deeplight: #959595;
+  --dark: #000;
+  --shadow: 0 -2px 5px var(--deeplight);
+}
+.primary_btn{
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  transition: 0.4s;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.primary_btn:hover{
+  color: var(--primary);
+  background-color: var(--light);
+  transition: 0.4s;
+}
+button[sizes="small"]{
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+/*----------------------- sidebar section ----------------------*/
+.sidebar{
+  background-color: var(--light) !important;
+  overflow: auto;
+  padding: 20px;
+  height: 100vh;
+}
+.side_header{
+  height: 15vh;
+  font-size: 35px;
+  font-weight: 800px;
+  font-style: italic;
+}
+.side_menu{
+  height: 65vh;
+  overflow: auto;
+}
+.side_menu ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--deeplight);
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.active_tab{
+  color: var(--primary);
+}
+.side_footer{
+  text-align: center;
+}
+.side_footer button{
+  margin-bottom:10px ;
+}
+/*----------------------- content section ----------------------*/
+.content_main{
+  background-color: var(--secondarylight) !important;
+  overflow: auto;
+  height: 100vh;
+  width:80%;
+  overflow:auto; 
+  padding: 75px 100px 30px 100px; 
+  /* position: relative; */
+}
+/* ------------------Chat Logo---------------------- */
+.chat_logo{
+  width: 100px;
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+/*----------------------- Card ----------------------*/
+.card_main{
+  border:1px solid var(--deeplight);
+  position: relative;
+  background-color: #F5F4F4;
+  border-radius: 10px;
+  /* width: 85%; */
+}
+.card_image{
+  max-width: 50px;
+  margin: auto;
+  margin-top: 20px;
+}
+.card_main .name{
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.card_tag{
+  position: absolute;
+  top: -20px;
+  right: -40px;
+  width: fit-content;
+  padding: 10px 30px;
+  background-color: var(--danger);
+  border-radius: 10px;
+  color: var(--light);
+}
+.card_overlay{
+  position: relative;
+  bottom: 0;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--deeplight);
+}
+.card_overlay .distance{
+  padding: 10px;
+}
+.card_footer{
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+}
+/*------------------- current request -----------------*/
+.page_main{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.page_main h1{
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 600;
+}
+.request_details, .request_stats{
+  background-color: var(--light);
+  padding: 40px;
+}
+.request_details{
+  border-radius: 50px;  
+}
+.stats{
+  display: flex;
+  width: 70%;
+  /* gap: 30px; */
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.stats h2{
+  color: var(--primary);
+  font-size: 29px;
+  font-weight: 700;
+}
+.stats p{
+  color: var(--deeplight);
+}
+.stats .dates{
+  padding: 0 20px;
+  border-left: 2px solid var(--deeplight);
+  border-right: 2px solid var(--deeplight);
+}
+.stats .dates h2{
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-between; */
+}
+.stats .dates p{
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-between; */
+}
+.status_bar{
+  border: 1px solid var(--deeplight);
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+}
+.status_bar .status:nth-child(2){
+  border-left: 1px solid var(--deeplight);
+  border-right: 1px solid var(--deeplight);
+}
+.status_bar .status{
+  width: 33.33%;
+  text-align: center;
+  padding: 13px 30px;
+  color: var(--deeplight);
+}
+.status_bar .received{
+  width: 33.33%;
+  text-align: start;
+  background-color: var(--secondary);
+}
+.request_status{
+  background-color: var(--primary);
+  color: var(--light);
+  width: 70%;
+  padding: 13px 30px;
+  border-radius: 24px;
+  text-transform: uppercase;
+}
+.cards_container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+
